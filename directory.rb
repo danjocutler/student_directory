@@ -1,35 +1,12 @@
-student_count = 28
+# Let's put all the students into an array
+students = %w(Dan Hadi Craig Andrew Tim Steve Andrew
+			Colin James Andrew Bernard Zeeshan Fadie Sean
+			Pablo Alex Nicole Sandrine Yvette Denise Victoria
+			Camilla Ella Ana Anna Rachel Elena Karin)
 
 #first we print the list of students
 puts "The students of my cohort at Makers Academy"
 puts "-------------"
-puts "Dan"
-puts "Hadi"
-puts "Craig"
-puts "Andrew"
-puts "Andrew"
-puts "Steve"
-puts "Tim"
-puts "Colin"
-puts "James"
-puts "Andrew"
-puts "Bernard"
-puts "Zeeshan"
-puts "Fadie"
-puts "Sean"
-puts "Pablo"
-puts "Alex"
-puts "Nicole"
-puts "Sandrine"
-puts "Yvette"
-puts "Denise"
-puts "Victoria"
-puts "Camilla"
-puts "Ella"
-puts "Ana"
-puts "Anna"
-puts "Rachel"
-puts "Elena"
-puts "Karin"
+students.each {|student| puts student}
 #finally, we print the total
-print "Overall, we have #{student_count} great students"
+print "Overall, we have #{students.length} great students"
