@@ -1,10 +1,21 @@
-# Let's put all the students into an array
-students =  [
-			{:name => "Dan", :cohort => :september}, {:name => "Hadi", :cohort => :september}, {:name => "Craig",:cohort => :september}, {:name => "Andrew", :cohort => :september}, {:name => "Tim", :cohort =>:september}, {:name => "Steve", :cohort => :september}, {:name => "Andrew", :cohort => :september},
-			{:name => "Colin", :cohort => :september}, {:name => "James", :cohort => :september}, {:name => "Andrew", :cohort => :september}, {:name => "Bernard", :cohort => :september}, {:name => "Zeeshan", :cohort => :september}, {:name => "Fadie", :cohort => :september}, {:name => "Sean", :cohort => :september},
-			{:name => "Pablo", :cohort => :september}, {:name => "Alex", :cohort => :september}, {:name => "Nicole", :cohort => :september}, {:name => "Sandrine", :cohort => :september}, {:name => "Yvette", :cohort => :september}, {:name => "Denise", :cohort => :september}, {:name => "Victoria", :cohort => :september}, 
-			{:name => "Camilla", :cohort => :september}, {:name => "Ella", :cohort => :september}, {:name => "Ana", :cohort => :september}, {:name => "Anna", :cohort => :september}, {:name => "Rachel", :cohort => :september}, {:name => "Elena", :cohort => :september}, {:name => "Karin", :cohort => :september}
-			]
+def input_students
+  puts "Please enter the names of the students"
+  puts "To finish, just hit return twice"
+  # create an empty array
+  students = []
+  # get the first name
+  name = gets.chomp
+  # while the name is not empty, repeat this code
+  while !name.empty? do    
+    # add the student hash to the array
+    students << {:name => name, :cohort => :September}    
+    puts "Now we have #{students.length} students"
+    # get another name from the user
+    name = gets.chomp
+  end
+  # return the array of students
+  students
+end
 
 #first we print the list of students
 def print_header
@@ -22,6 +33,7 @@ def print_footer(names)
 end
 
 #nothing happens until we call the methods
+students = input_students
 print_header
 print(students)
 print_footer(students)
