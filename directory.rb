@@ -28,3 +28,7 @@ puts "Anna"
 puts "Rachel"
 puts "Elena"
 puts "Karin"
+
+print "Overall, we have "
+print 28
+puts " great students"
